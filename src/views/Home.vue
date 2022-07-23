@@ -12,7 +12,7 @@ import Cards from "@/components/Cards.vue"
 export default {
   name: "home",
   components: {
-    Cards
-  }
+    Cards,
+  },
 }
 </script>

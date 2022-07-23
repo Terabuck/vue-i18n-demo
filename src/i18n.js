@@ -4,7 +4,7 @@ import getBrowserLocale from "@/util/i18n/get-browser-locale"
 import { supportedLocalesInclude } from "./util/i18n/supported-locales"
 import {
   getChoiceIndex,
-  setDefaultChoiceIndexGet
+  setDefaultChoiceIndexGet,
 } from "./util/i18n/choice-index-for-plural"
 import dateTimeFormats from "@/locales/date-time-formats"
 import numberFormats from "@/locales/number-formats"
@@ -51,7 +51,7 @@ const i18n = new VueI18n({
   messages: {},
   // messages: loadLocaleMessages()
   dateTimeFormats,
-  numberFormats
+  numberFormats,
 })
 
 const loadedLanguages = []
@@ -74,7 +74,7 @@ export function loadLocaleMessagesAsync(locale) {
   // If the language hasn't been loaded yet
   return import(
     /* webpackChunkName: "locale-[request]" */ `@/locales/${locale}.json`
-  ).then(messages => {
+  ).then((messages) => {
     i18n.setLocaleMessage(locale, messages.default)
 
     loadedLanguages.push(locale)

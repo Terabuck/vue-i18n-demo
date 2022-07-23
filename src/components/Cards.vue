@@ -9,14 +9,14 @@ import Card from "./Card"
 
 export default {
   data: () => ({
-    cards: []
+    cards: [],
   }),
   created() {
     fetch("/data.json")
-      .then(response => response.json())
-      .then(data => (this.cards = data))
+      .then((response) => response.json())
+      .then((data) => (this.cards = data))
   },
-  components: { Card }
+  components: { Card },
 }
 </script>
 

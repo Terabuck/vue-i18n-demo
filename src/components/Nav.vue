@@ -20,7 +20,7 @@ import LocaleSwitcher from "@/components/LocaleSwitcher"
 import LocalizedLink from "@/components/LocalizedLink"
 
 export default {
-  components: { LocaleSwitcher, LocalizedLink }
+  components: { LocaleSwitcher, LocalizedLink },
 }
 </script>
 

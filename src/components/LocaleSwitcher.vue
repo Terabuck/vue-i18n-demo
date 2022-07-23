@@ -1,7 +1,9 @@
 <template>
   <div class="locale-switcher">
     <select :value="$i18n.locale" @change.prevent="changeLocale">
-      <option :value="locale.code" v-for="locale in locales" :key="locale.code">{{locale.name}}</option>
+      <option :value="locale.code" v-for="locale in locales" :key="locale.code">
+        {{ locale.name }}
+      </option>
     </select>
   </div>
 </template>
@@ -16,7 +18,7 @@ export default {
       const locale = e.target.value
 
       this.$router.push(`/${locale}`)
-    }
-  }
+    },
+  },
 }
 </script>

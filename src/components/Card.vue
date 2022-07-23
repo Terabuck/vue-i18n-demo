@@ -6,12 +6,12 @@
 
     <div class="card__footer">
       <div class="card__meta">
-        <p class="price">{{$n(price, "currency")}}</p>
+        <p class="price">{{ $n(price, "currency") }}</p>
 
         <p>{{ $d(new Date(addedOn), "short") }}</p>
       </div>
 
-      <p class="likes">{{$tc("card.likes", likes)}}</p>
+      <p class="likes">{{ $tc("card.likes", likes) }}</p>
     </div>
   </div>
 </template>
@@ -24,8 +24,8 @@ export default {
     price: Number,
     imgUrl: String,
     addedOn: String,
-    likes: Number
-  }
+    likes: Number,
+  },
 }
 </script>
 
